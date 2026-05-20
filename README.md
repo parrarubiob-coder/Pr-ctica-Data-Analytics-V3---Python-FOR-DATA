@@ -1,5 +1,6 @@
 # 📊 Bank Marketing Analysis with Python
 
+
 ## 🇪🇸 Spanish Version
 ➡️ [Read the Spanish version here](README_ES.md)
 
@@ -29,13 +30,12 @@
 - [Key Insights](#-key-insights)
 - [Business Recommendations](#-business-recommendations)
 - [Project Structure](#-project-structure)
-- [Installation & Setup](#-installation--setup)
 
 ---
 
 # 📌 Project Overview
 
-This project consists of an **Exploratory Data Analysis (EDA)** performed using Python on direct marketing campaigns conducted by a Portuguese banking institution.
+This project consists of an Exploratory Data Analysis (EDA) performed using Python on direct marketing campaigns conducted by a Portuguese banking institution.
 
 The main goal of the project is to analyze customer behavior and identify patterns related to term deposit subscriptions.
 
@@ -125,8 +125,7 @@ Main preprocessing tasks performed:
 - Handling missing values
 - Removing duplicates
 - Standardizing column names
-- Converting data types
-- Formatting dates
+- Checking data types
 - Merging datasets
 - Detecting inconsistencies
 
@@ -134,5 +133,147 @@ Main preprocessing tasks performed:
 
 ```python
 df.columns = df.columns.str.lower()
+```
 
-df['date'] = pd.to_datetime(df['date'])
+---
+
+# 🔍 Exploratory Data Analysis
+
+The exploratory analysis focused on:
+
+- Distribution of numerical variables
+- Analysis of categorical variables
+- Correlation between variables
+- Customer segmentation
+- Conversion analysis
+- Behavioral patterns
+
+### Techniques Used
+
+```python
+df.describe()
+df.groupby()
+df.value_counts()
+df.corr()
+```
+
+---
+
+# 📊 Visualizations
+
+The project includes several visualizations developed using Matplotlib and Seaborn.
+
+### Main Visualizations
+
+- Histograms
+- Countplots
+- Boxplots
+- Correlation heatmaps
+- Scatterplots
+- Conversion analysis charts
+
+---
+
+## Correlation Heatmap
+
+```python
+sns.heatmap(correlacion, cmap='coolwarm')
+```
+
+![Correlation Heatmap](Images/heatmap.png)
+
+---
+
+## Conversion Distribution
+
+Visualization comparing customers who subscribed versus those who did not.
+
+![Conversion Distribution](Images/conversion_distribution.png)
+
+---
+
+## Conversion by Job
+
+Analysis of conversion rates by professional profile.
+
+![Conversion by Job](Images/conversion_by_job.png)
+
+---
+
+# 📈 Key Insights
+
+- Customers with longer call durations showed higher conversion rates
+- Previous successful marketing campaigns positively influenced subscription probability
+- Some professional profiles achieved significantly better conversion performance
+- Economic indicators such as Euribor rates influenced customer decisions
+- Customers with higher digital interaction showed interesting behavioral patterns
+
+---
+
+# 📌 Key Metrics
+
+## Conversion Rate
+
+The conversion rate was calculated using:
+
+```python
+conversion_rate = (df['y'].value_counts(normalize=True)['yes']) * 100
+```
+
+---
+
+# 💡 Business Recommendations
+
+- Prioritize customers with positive previous campaign outcomes
+- Improve customer segmentation strategies
+- Optimize call duration and communication timing
+- Develop more personalized marketing strategies
+- Increase focus on digitally active customers
+
+---
+
+# 📁 Project Structure
+
+```bash
+bank-marketing-analysis/
+│
+├── Data/
+│   ├── Raw/
+│   │   ├── bank-additional.csv
+│   │   └── customer-details.xlsx
+│   │
+│   └── Processed/
+│       └── bank_marketing_clean.csv
+│
+├── Notebooks/
+│   ├── bank_marketing_eda_es.ipynb
+│   └── bank_marketing_eda_en.ipynb
+│
+├── Images/
+│   ├── heatmap.png
+│   ├── conversion_distribution.png
+│   └── conversion_by_job.png
+│
+├── README.md
+├── README_ES.md
+├── requirements.txt
+└── .gitignore
+```
+
+
+# 📚 Main Libraries Used
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+---
+
+# 👩‍💻 Author
+
+**Beatriz Parra Rubio**
+
+Data Analytics & Business Intelligence professional with experience in data analysis, reporting, and business insights generation.
