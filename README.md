@@ -1,7 +1,5 @@
 # 📊 Bank Marketing Analysis with Python
 
-![Project Banner](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop)
-
 ## 🇪🇸 Spanish Version
 ➡️ [Read the Spanish version here](README_ES.md)
 
