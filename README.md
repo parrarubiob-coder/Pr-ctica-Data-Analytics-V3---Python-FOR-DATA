@@ -276,4 +276,3 @@ import seaborn as sns
 
 **Beatriz Parra Rubio**
 
-Data Analytics & Business Intelligence professional with experience in data analysis, reporting, and business insights generation.
